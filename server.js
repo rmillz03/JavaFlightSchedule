@@ -21,9 +21,9 @@ app.set('views', __dirname + '/views')
 app.set('layout', 'layouts/mainLayout')
 app.use(expressLayouts)
 app.use(express.static('public')) 
-app.use(express.static(path.join(__dirname, 'client/build')));
+app.use(express.static(path.join(__dirname, 'public/build')));
 app.get('*', (req, res) => { 
-  res.sendFile(path.join(__dirname + '/client/build/index.html')) 
+  res.sendFile(path.join(__dirname + '/public/build/index.html')) 
 });
 app.use(express.urlencoded({ extended: false })) //need to allow pages to access form data
 
