@@ -1,14 +1,14 @@
-
-const express = require('express');                 //server
-const morgan = require('morgan');                   //logs requests directed to backend
-//const dotenv = require('dotenv');                   //environmental vars
-const session = require('express-session');         //user sessions
-const expressLayouts = require('express-ejs-layouts');
-
-//dotenv.config();
 if (process.env.NODE_ENV !== 'production') {
     require('dotenv').config()
 }
+
+const express = require('express');                 //server
+const morgan = require('morgan');                   //logs requests directed to backend
+const session = require('express-session');         //user sessions
+const expressLayouts = require('express-ejs-layouts');
+
+//const dotenv = require('dotenv');                   //environmental vars
+//dotenv.config();
 
 // const handler = require('serve-handler');
 // const http = require('http');
@@ -27,10 +27,10 @@ app.set('views', __dirname + '/views')
 app.set('layout', 'layouts/mainLayout')
 app.use(expressLayouts)
 app.use(express.static('public')) 
-app.use(express.static(path.join(__dirname, 'public')));
-app.get('*', (req, res) => { 
-   res.sendFile(path.join(__dirname + '/public')) 
-});
+// app.use(express.static(path.join(__dirname, 'public')));
+// app.get('*', (req, res) => { 
+//    res.sendFile(path.join(__dirname + '/public')) 
+// });
 app.use(express.urlencoded({ extended: false })) //need to allow pages to access form data
 
 app.use(session({
