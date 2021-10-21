@@ -1,0 +1,93 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body::before
+{
+    content: "";
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right:0px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #14213D;
+    overflow: hidden;
+    background-image: url('../images/cockpit-helicopter.jpg');
+    opacity: 0.3;
+}
+
+.login-box
+{
+    width: 280px;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    color: #14213D;
+}
+
+.login-box h1
+{
+    float: left;
+    font-size: 40px;
+    border-bottom: 6px solid #FCA311;
+    margin-bottom: 50px;
+    padding: 13px 0;
+}
+
+.textbox
+{
+    width: 100%;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 8px 0;
+    margin: 8px 0;
+    border-bottom: 1px solid #FCA311;
+}
+
+.textbox i
+{
+    width: 26px;
+    float: left;
+    text-align: center;
+}
+
+.textbox input
+{
+    border: none;
+    outline: none;
+    background: none;
+    color: #14213D;
+    font-size: 18px;
+    width: 80%;
+    float: left;
+    margin: 0 10px;
+}
+
+.btn
+{
+    min-width: 150px;
+    background: none;
+    border: 2px solid #FCA311;
+    color: #14213D;
+    padding: 5px;
+    font-size: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-bottom: 10px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn:hover
+{
+    background-color: #14213D;
+    color: white;
+}

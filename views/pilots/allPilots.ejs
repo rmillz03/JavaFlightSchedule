@@ -1,0 +1,56 @@
+<br />
+<br />
+<div class="tablespace">
+<fieldset>
+    <legend>Aircrew Roster</legend>
+    <% if (aircrew.EOF) 
+    { %>
+         <p>Recordset is empty</p>
+ <% }   
+    else
+    { %>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Call Sign</th>
+                        <th>Pilot</th>
+                        <th>UH60</th>
+                    </tr>
+                </thead>
+                <tbody>
+         <% aircrew.forEach(crew => { %>
+                    <tr>
+                        <td> <%= crew.crewID %> </td>
+                        <td> <%= crew.name %> </td>
+                        <td> <%= crew.callSign %> </td>
+
+                     <% if (crew.pilot=='1')
+                        { %>
+                            <td><i class="fas fa-check-circle"></i></td>
+                     <% }
+                        else
+                        { %>
+                            <td><i class="fas fa-times-circle"></i></td>
+                     <% } %>
+
+                     <% if (crew.UH60=='1')
+                        { %>
+                            <td><i class="fas fa-check-circle"></i></td>
+                     <% }
+                        else
+                        { %>
+                            <td><i class="fas fa-times-circle"></i></td>
+                     <% } %>
+                        
+                    </tr>
+         <% }) %>
+                </tbody>
+             </table>
+         </div>
+      
+     <% } %>
+</fieldset>
+</div>

@@ -1,0 +1,15 @@
+<form action="/flightRoute/createFlight" method="POST">
+    <fieldset>
+        <legend>Create Mission</legend>
+        <div class="flex-container">
+            <input class="flex-item" type="number" id="pilot1" name="pilot1" placeholder="Pilot Name"> <br/>
+            <input class="flex-item" type="number" id="tailNum" name="tailNum" placeholder="Tail Number"> <br/>
+            <input class="flex-item" type="string" id="ETD" name="ETD" placeholder="ETD"> <br/>
+            <input class="flex-item" type="number" id="julianDate" name="julianDate" value="<%= julian %>"> <br/>
+        </div>
+    </fieldset>
+    <br />
+    <input class="btn" type="submit" name="submit" value="Submit Form">
+    <a class="btn" href="/userRoute/dashboard">CANCEL</a>
+</form>
+

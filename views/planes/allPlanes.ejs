@@ -1,0 +1,33 @@
+<br />
+<br />
+<div class="tablespace">
+    <fieldset>
+        <legend>Available Aircraft</legend>
+    <% if (aircraft.EOF) 
+    { %>
+            <p>Recordset is empty</p>
+    <% }   
+    else
+    { %>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tail Number</th>
+                        <th>Model</th>
+                    </tr>
+                </thead>
+                <tbody>
+            <% aircraft.forEach(plane => { %>
+                    <tr>
+                        <td> <%= plane.tailNum %> </td>
+                        <td> <%= plane.model %> </td>
+                    </tr>
+            <% }) %>
+                </tbody>
+            </table>
+        </div>
+        
+    <% } %>
+    </fieldset>
+</div>

@@ -1,0 +1,46 @@
+<!-- looking into css display: flex -->
+
+<form action="/crewRoute/createCrew" method="POST">
+    <fieldset>
+        <legend>Add Aircrew</legend>
+        <div class=".flex-container">
+            <input class="flex-item" type="text" id="name" name="name" placeholder="Name"> <br/>
+            <input class="flex-item" type="text" id="callSign" name="callSign" placeholder="Call Sign"> <br/>
+        </div>
+    </fieldset>
+    <br />
+    <br />
+    <fieldset>
+        <legend>Qualifications</legend>
+        <div class="flex-container">
+            <div class="qual-item">
+                <input type="checkbox" id="isPilot" name="isPilot" value="1" checked> <br/>
+                <label for="isPilot">Pilot</label>
+            </div>
+            <div class="qual-item">
+                <input type="checkbox" id="isCrewChief" name="isCrewChief" value="1"> <br/>
+                <label for="flyUH60">Crew Chief</label>    
+            </div>
+            <div class="qual-item">
+                <input type="checkbox" id="PC" name="PC" value="1"> <br/>
+                <label for="flyUH60">PC</label>    
+            </div>
+            <div class="qual-item">
+                <input type="checkbox" id="PI" name="PI" value="1"> <br/>
+                <label for="flyUH60">PI</label>    
+            </div>
+            <div class="qual-item">
+                <input type="checkbox" id="flyUH60" name="flyUH60" value="1" checked> <br/>
+                <label for="flyUH60">UH-60</label>    
+            </div>
+            <div class="qual-item">
+                <input type="checkbox" id="flyUH72" name="flyUH72" value="1"> <br/>
+                <label for="flyUH60">UH-72</label>    
+            </div>
+        </div>
+    </fieldset>
+    <br />
+    <input class="btn" type="submit" name="submit" value="Submit">
+    <a class="btn" href="/userRoute/dashboard">CANCEL</a>
+</form>
+

@@ -1,0 +1,24 @@
+<!--
+    Oringal webpage design by DarkCode
+    Source: https://youtu.be/ooc6f1w6Mzg
+
+    Photo created by bearfotos
+    Source: https://www.freepik.com/photos/button
+-->
+<body>
+    <form action="/userRoute/login" method="POST">
+        <div class="login-box">
+            <h1>Login</h1>
+            <div class="textbox">
+                <i class="fas fa-user"></i>
+                <input type="email" placeholder="Email" name="email" id="email" required>
+            </div>
+            <div class="textbox">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="Password" name="password" id="password" required>
+            </div>
+            <input class="btn" type="submit" name="submit" value="Sign In" onclick="userRoute/login">
+            <a class="btn" href="/userRoute/register">Register</a>
+        </div>
+    </form>
+</body>
