@@ -9,10 +9,10 @@ const session = require('express-session');         //user sessions
 const expressLayouts = require('express-ejs-layouts');
 
 
-dotenv.config();
+//dotenv.config();
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 8080;
 
 app.use(morgan('dev'))
 
