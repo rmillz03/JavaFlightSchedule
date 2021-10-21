@@ -1,10 +1,10 @@
 {
-  "name": "flightScheduleJavaV1",
+  "name": "flight-schedule-java1",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "Node server.js",
+    "start": "node server.js",
     "dev": "nodemon server.js"
   },
   "keywords": [],
