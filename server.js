@@ -1,15 +1,21 @@
+
+const express = require('express');                 //server
+const morgan = require('morgan');                   //logs requests directed to backend
+//const dotenv = require('dotenv');                   //environmental vars
+const session = require('express-session');         //user sessions
+const expressLayouts = require('express-ejs-layouts');
+
+//dotenv.config();
 if (process.env.NODE_ENV !== 'production') {
     require('dotenv').config()
 }
 
-const express = require('express');                 //server
-const morgan = require('morgan');                   //logs requests directed to backend
-const dotenv = require('dotenv');                   //environmental vars
-const session = require('express-session');         //user sessions
-const expressLayouts = require('express-ejs-layouts');
-
-
-//dotenv.config();
+// const handler = require('serve-handler');
+// const http = require('http');
+// const server = http.createServer((request, response) => {
+//     return handler(request, response);
+// })
+// server.listen(port, () => console.log(`Server listening on port ${port}`));
 
 const app = express();
 const port = process.env.PORT || 8080;
